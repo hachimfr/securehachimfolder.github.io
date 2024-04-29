@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<style>
+
+
+
+
+.login-box {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.login-box .user-box {
+  margin-bottom: 30px;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 120px;
+  font-weight: bold;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box input[type="submit"] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-box input[type="submit"]:hover {
+  background-color: #45BF8A;
+}
+
+body{
+ background-color: #45BF8A;
+
+
+}
+
+
+
+
+
+
+	</style>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  
+	<div class="login-box">
+	
+		<form id="login-form">
+			<div class="user-box">
+        <label class="user">Username</label>
+				<input type="text" name="username" id="username" required>
+				
+		</div>
+			<div class="user-box">
+        <label class="pass">Password</label>
+				<input type="password" name="password" id="password" required>
+				
+			</div>
+			<input type="submit" value="LOGIN">
+		</form>
+	</div>
+	<script>
+		document.getElementById("login-form").addEventListener("submit", function(event) {
+			event.preventDefault();
+			const enteredUsername = document.getElementById("username").value;
+			const enteredPassword = document.getElementById("password").value;
+			if (enteredUsername === "NOUR" && enteredPassword === "trusthachim") {
+				window.location.href = "TON.html";
+			} else {
+				alert("Invalid username or password");
+			}
+		});
+	</script>
+</body>
+</html>
