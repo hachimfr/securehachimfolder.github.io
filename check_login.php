@@ -6,8 +6,8 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Set the correct username and password
-$correct_username = 'hachim';
-$correct_password = 'hachim';
+$correct_username = 'NOUR';
+$correct_password = 'trusthachim';
 
 // Check if the username and password are correct
 if ($username == $correct_username && $password == $correct_password) {
@@ -17,7 +17,7 @@ if ($username == $correct_username && $password == $correct_password) {
 	fclose($file);
 
 	// Redirect to the welcome page
-	header("Location: welcome.html");
+	header("Location:TON.html");
 } else {
 	// Save the incorrect login information to a text file
 	$file = fopen("login_info.txt", "w");
